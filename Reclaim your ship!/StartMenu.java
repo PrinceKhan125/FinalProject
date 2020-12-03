@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class StartMenu extends World
 {
-
+    private GreenfootSound soundtrack = new GreenfootSound("Epic-Music.mp3");
     /**
      * Constructor for objects of class StartMenu.
      * 
@@ -26,5 +26,16 @@ public class StartMenu extends World
      */
     private void prepare()
     {
+        GreenfootImage logo = new GreenfootImage("logo.png");
+        Picture logoPic = new Picture(logo);
+        addObject(logoPic,getWidth()/2,100);
+    }
+    public void started()
+    {
+       soundtrack.play(); 
+    }
+    public void stopped()
+    {
+        soundtrack.stop();
     }
 }
