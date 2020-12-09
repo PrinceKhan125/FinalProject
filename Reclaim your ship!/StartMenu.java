@@ -20,6 +20,16 @@ public class StartMenu extends World
         prepare();
     }
 
+    public void started()
+    {
+        soundtrack.play(); 
+    }
+
+    public void stopped()
+    {
+        soundtrack.stop();
+    }
+
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -29,13 +39,21 @@ public class StartMenu extends World
         GreenfootImage logo = new GreenfootImage("logo.png");
         Picture logoPic = new Picture(logo);
         addObject(logoPic,getWidth()/2,100);
-    }
-    public void started()
-    {
-       soundtrack.play(); 
-    }
-    public void stopped()
-    {
-        soundtrack.stop();
+        Play play = new Play();
+        addObject(play,318,205);
+        play.setLocation(71,267);
+        removeObject(play);
+        addObject(play,138,291);
+        play.setLocation(40,242);
+        play.setLocation(38,243);
+        play.setLocation(43,217);
+        removeObject(play);
+        addObject(play,297,159);
+        play.setLocation(300,200);
+        Instructions instructions = new Instructions();
+        addObject(instructions,64,368);
+        instructions.setLocation(122,367);
+        Exit exit = new Exit();
+        addObject(exit,567,367);
     }
 }
