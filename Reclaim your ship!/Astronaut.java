@@ -30,8 +30,10 @@ public class Astronaut extends Actor
         moveAround();
         fireProjectile();
         hitAsteroids();
+        hitAsteroids2();
         animationCounter ++;
         altAnimationCounter ++;
+        EnterShip();
     }
     public void moveAround()
     {
@@ -78,6 +80,22 @@ public class Astronaut extends Actor
             Space1 space1 = (Space1)getWorld();
             HealthBar healthbar = space1.getHealthBar();
             healthbar.health--;
+        }
+    }
+    public void hitAsteroids2()
+    {
+           if(isTouching(Asteroids2.class))
+        {
+            Space2 space2 = (Space2)getWorld();
+            HealthBar healthbar = space2.getHealthBar();
+            healthbar.health--;
+        } 
+    }
+    public void EnterShip()
+    {
+        if(isTouching(SpaceShip.class))
+        {
+            Greenfoot.setWorld(new FinalBoss());
         }
     }
     public void animate()

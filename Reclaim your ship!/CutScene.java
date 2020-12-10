@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class CutScene extends World
 {
-
     /**
      * Constructor for objects of class CutScene.
      * 
@@ -28,5 +27,7 @@ public class CutScene extends World
     {
         SpaceShip spaceShip = new SpaceShip();
         addObject(spaceShip,293,143);
+        Astronaut astronaut = new Astronaut();
+        addObject(astronaut,28,144);
     }
 }

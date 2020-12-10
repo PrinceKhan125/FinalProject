@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Space1 extends World
-{
+{   
     HealthBar healthbar = new HealthBar();
     Counter counter = new Counter();
     public Space1()
@@ -32,7 +32,7 @@ public class Space1 extends World
         addAlien2();
         addAsteroid();
     }
-
+    
     public void addAlien1()
     {
         if (Greenfoot.getRandomNumber(300) < 1)
@@ -40,7 +40,7 @@ public class Space1 extends World
             addObject(new Alien1(), 599, Greenfoot.getRandomNumber(400));
         }
     }
-
+    
     public void addAlien2()
     {
         if (Greenfoot.getRandomNumber(300) < 1)
