@@ -55,5 +55,7 @@ public class StartMenu extends World
         instructions.setLocation(122,367);
         Exit exit = new Exit();
         addObject(exit,567,367);
+        Credits credits = new Credits();
+        addObject(credits,120,330);
     }
 }

@@ -10,12 +10,12 @@ public class BackKey extends Buttons
 {
     public BackKey()
     {
-        GreenfootImage myTitle = new GreenfootImage(100,60);
+        GreenfootImage backKey = new GreenfootImage(100,60);
         Font adjustedFont = new Font(true,false,40);
-        myTitle.setFont(adjustedFont);
-        myTitle.setColor(Color.MAGENTA);
-        myTitle.drawString("Back",0,50);
-        setImage(myTitle);  
+        backKey.setFont(adjustedFont);
+        backKey.setColor(Color.MAGENTA);
+        backKey.drawString("Back",0,50);
+        setImage(backKey);  
     }
     /**
      * Act - do whatever the BackKey wants to do. This method is called whenever

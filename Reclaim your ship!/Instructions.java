@@ -10,12 +10,12 @@ public class Instructions extends Buttons
 {
     public Instructions()
     {
-        GreenfootImage myTitle = new GreenfootImage(230,60);
+        GreenfootImage  instructions = new GreenfootImage(230,60);
         Font adjustedFont = new Font(true,false,40);
-        myTitle.setFont(adjustedFont);
-        myTitle.setColor(Color.GREEN);
-        myTitle.drawString("Instructions",0,50);
-        setImage(myTitle);
+        instructions.setFont(adjustedFont);
+        instructions.setColor(Color.GREEN);
+        instructions.drawString("Instructions",0,50);
+        setImage(instructions);
     }
     public void act() 
     {
