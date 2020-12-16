@@ -22,7 +22,7 @@ public class StartMenu extends World
 
     public void started()
     {
-        //soundtrack.play(); 
+        soundtrack.play(); 
     }
 
     public void stopped()

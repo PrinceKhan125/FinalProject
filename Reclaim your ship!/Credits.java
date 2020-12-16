@@ -10,13 +10,14 @@ public class Credits extends Buttons
 {
     public Credits()
     {
-       GreenfootImage credits = new GreenfootImage(230,60);
-       Font adjustedFont = new Font(true,false,50);
-       credits.setFont(adjustedFont);
-       credits.setColor(Color.YELLOW);
-       credits.drawString("Credits",0,50);
-       setImage(credits);
+        GreenfootImage credits = new GreenfootImage(230,60);
+        Font adjustedFont = new Font(true,false,50);
+        credits.setFont(adjustedFont);
+        credits.setColor(Color.YELLOW);
+        credits.drawString("Credits",0,50);
+        setImage(credits);
     }
+
     public void act() 
     {
         checkMouse();

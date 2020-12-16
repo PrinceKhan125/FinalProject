@@ -25,6 +25,7 @@ public class Buttons extends Actor
             adjTrans(MAX_TRANS);
         }
     }
+
     public void checkClick(World world)
     {
         if(Greenfoot.mouseClicked(this))
@@ -32,6 +33,7 @@ public class Buttons extends Actor
             Greenfoot.setWorld(world);
         }
     }
+
     public void adjTrans(int adjust)
     {
         GreenfootImage tempImage = getImage();

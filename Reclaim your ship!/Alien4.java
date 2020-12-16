@@ -18,7 +18,8 @@ public class Alien4 extends Enemies
         moveEnemy();
         hitByProjectile2();
     }
-        public void hitByProjectile2()
+
+    public void hitByProjectile2()
     {
         Actor projectile = getOneIntersectingObject(Projectile.class);
         if (projectile != null)

@@ -17,6 +17,7 @@ public class Instructions extends Buttons
         instructions.drawString("Instructions",0,50);
         setImage(instructions);
     }
+
     public void act() 
     {
         checkMouse();

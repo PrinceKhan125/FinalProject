@@ -17,6 +17,7 @@ public class Exit extends Buttons
         exit.drawString("Exit",0,50);
         setImage(exit); 
     }
+
     public void act() 
     {
         checkMouse();

@@ -20,11 +20,13 @@ public class HealthBar extends Actor
     {
         update();
     }
+
     public void act()
     {
         update();
         gameOver();
     }
+
     public void update()
     {
         setImage(new GreenfootImage(healthBarWidth + 2,healthBarHeight + 2));
@@ -34,10 +36,12 @@ public class HealthBar extends Actor
         myImage.setColor(Color.RED);
         myImage.fillRect(1,1,health*PixelPerHealthPoint, healthBarHeight);
     }
+
     public void loseHealth()
     {
         health--;
     }
+
     public void gameOver()
     {
         if(health == 0)

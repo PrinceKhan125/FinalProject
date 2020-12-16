@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Astronaut extends Actor
 {
     boolean canFire = true;
-    
+
     private GreenfootImage run1 = new GreenfootImage("Run1.png");
     private GreenfootImage run2 = new GreenfootImage("Run2.png");
     private GreenfootImage fly1 = new GreenfootImage("Fly1.png");
@@ -35,25 +35,32 @@ public class Astronaut extends Actor
         altAnimationCounter ++;
         EnterShip();
     }
+
     public void moveAround()
     {
         if(Greenfoot.isKeyDown("d"))
         {
             setLocation(getX()+3,getY());
             if (animationCounter % 10 == 0)
-            animate();
+            {
+                animate();
+            }
         }
         if(Greenfoot.isKeyDown("a"))
         {
             setLocation(getX()-3,getY());
             if (animationCounter % 10 == 0)
-            animate();
+            { 
+                animate();
+            }
         }
         if(Greenfoot.isKeyDown("w"))
         {
             setLocation(getX(),getY()-3);
             if (altAnimationCounter % 10 == 0)
-            animateAlt();
+            {
+                animateAlt();
+            }
         }
         if(Greenfoot.isKeyDown("s"))
         {
@@ -61,6 +68,7 @@ public class Astronaut extends Actor
             goingDown();
         }
     }
+
     public void fireProjectile()
     {
         if (Greenfoot.isKeyDown("space") && canFire == true)
@@ -73,6 +81,7 @@ public class Astronaut extends Actor
             canFire = true;
         }
     }
+
     public void hitAsteroids()
     {
         if(isTouching(Asteroids.class))
@@ -82,15 +91,17 @@ public class Astronaut extends Actor
             healthbar.health--;
         }
     }
+
     public void hitAsteroids2()
     {
-           if(isTouching(Asteroids2.class))
+        if(isTouching(Asteroids2.class))
         {
             Space2 space2 = (Space2)getWorld();
             HealthBar healthbar = space2.getHealthBar();
             healthbar.health--;
         } 
     }
+
     public void EnterShip()
     {
         if(isTouching(SpaceShip.class))
@@ -98,6 +109,7 @@ public class Astronaut extends Actor
             Greenfoot.setWorld(new FinalBoss());
         }
     }
+
     public void animate()
     {
         if (frame == 1)
@@ -112,6 +124,7 @@ public class Astronaut extends Actor
         }
         frame ++;
     }
+
     public void animateAlt()
     {
         if (altframe ==1)
@@ -130,6 +143,7 @@ public class Astronaut extends Actor
         }
         altframe ++;
     }
+
     public void goingDown()
     {
         if (lastframe ==1)

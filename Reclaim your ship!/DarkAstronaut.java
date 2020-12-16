@@ -26,7 +26,9 @@ public class DarkAstronaut extends Actor
         hitByProjectile();
         animationCounter2++;
         if (animationCounter2 % 10 == 0)
-        animation();
+        {
+            animation();
+        }
     }
 
     public void turnAtEdge()
@@ -72,6 +74,7 @@ public class DarkAstronaut extends Actor
             getWorld().removeObject(this);
         } 
     }
+
     public void animation()
     {
         if (frame2 == 1)
