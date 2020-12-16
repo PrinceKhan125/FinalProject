@@ -8,9 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Space2 extends World
 {
-    int score = 0;
     HealthBar healthbar = new HealthBar();
-    Counter counter = new Counter();
+    Counter2 counter2 = new Counter2();
     /**
      * Constructor for objects of class Space2.
      * 
@@ -22,9 +21,9 @@ public class Space2 extends World
         prepare();
     }
 
-    public Counter getCounter()
+    public Counter2 getCounter2()
     {
-        return counter;
+        return counter2;
     }
 
     public HealthBar getHealthBar()
@@ -70,7 +69,7 @@ public class Space2 extends World
      */
     private void prepare()
     {
-        addObject(counter,70,20);
+        addObject(counter2,70,20);
         addObject(healthbar,200,20);
         Astronaut astronaut = new Astronaut();
         addObject(astronaut,40,200);

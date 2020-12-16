@@ -26,8 +26,8 @@ public class Alien3 extends Enemies
             getWorld().removeObject(projectile);
             World world = getWorld();
             Space2 space2 = (Space2) world;
-            Counter counter = space2.getCounter();
-            counter.addScore();
+            Counter2 counter2 = space2.getCounter2();
+            counter2.addScore();
             getWorld().removeObject(this);
         }
         else if (getX() == 0)

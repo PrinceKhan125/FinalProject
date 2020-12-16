@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DarkAstronaut extends Actor
 {
-    int timesHit = 0;
+    int timesHit = 10;
     /**
      * Act - do whatever the DarkAstronaut wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -37,7 +37,7 @@ public class DarkAstronaut extends Actor
             turn(Greenfoot.getRandomNumber(90)-45);
         }
     }
-    
+
     public void lookForAstronaut()
     {
         if(isTouching(Astronaut.class))
@@ -56,13 +56,13 @@ public class DarkAstronaut extends Actor
             getWorld().removeObject(projectile);
             World world = getWorld();
             FinalBoss finalboss = (FinalBoss)world;
-            Counter counter = finalboss.getCounter();
-            counter.addScore();
+            Counter3 counter3 = finalboss.getCounter3();
+            counter3.addScore();
             timesHit--;
         }
-        if (timesHit == 15)
+        if (timesHit == 0)
         {
             getWorld().removeObject(this);
-        }
+        } 
     }
 }
