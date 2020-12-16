@@ -12,4 +12,6 @@ comment4.params=
 comment4.target=void\ lookForAstronaut()
 comment5.params=
 comment5.target=void\ hitByProjectile()
-numComments=6
+comment6.params=
+comment6.target=void\ animation()
+numComments=7

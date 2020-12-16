@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DarkAstronaut extends Actor
 {
+    private GreenfootImage rrun1 = new GreenfootImage("RRun1.png");
+    private GreenfootImage rrun2 = new GreenfootImage("RRun2.png");
+    private int animationCounter2 = 0;
+    private int frame2 = 1;
     int timesHit = 10;
     /**
      * Act - do whatever the DarkAstronaut wants to do. This method is called whenever
@@ -20,6 +24,9 @@ public class DarkAstronaut extends Actor
         randomTurn();
         lookForAstronaut();
         hitByProjectile();
+        animationCounter2++;
+        if (animationCounter2 % 10 == 0)
+        animation();
     }
 
     public void turnAtEdge()
@@ -64,5 +71,19 @@ public class DarkAstronaut extends Actor
         {
             getWorld().removeObject(this);
         } 
+    }
+    public void animation()
+    {
+        if (frame2 == 1)
+        {
+            setImage(rrun1);
+        }
+        else if(frame2 == 2)
+        {
+            setImage(rrun2);
+            frame2 =1;
+            return;
+        }
+        frame2 ++;
     }
 }
