@@ -19,7 +19,7 @@ public class DarkAstronaut extends Actor
      */
     public void act() 
     {
-        move(1);
+        move(3);
         turnAtEdge();
         randomTurn();
         lookForAstronaut();

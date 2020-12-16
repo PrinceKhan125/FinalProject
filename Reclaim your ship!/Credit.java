@@ -15,7 +15,7 @@ public class Credit extends World
     public Credit()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 530, 1); 
+        super(574, 376, 1); 
         prepare();
     }
 
@@ -26,6 +26,6 @@ public class Credit extends World
     private void prepare()
     {
         BackKey backKey = new BackKey();
-        addObject(backKey,60,495);
+        addObject(backKey,60,345);
     }
 }
